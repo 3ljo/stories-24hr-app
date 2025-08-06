@@ -176,7 +176,7 @@ export default function StoryViewer() {
           </div>
 
           {/* Header */}
-          <div className="absolute top-12 left-4 right-4 flex items-center justify-between z-10">
+          <div className="absolute top-12 left-4 right-4 flex items-center justify-between z-20">
             <div className="flex items-center gap-3">
               <Image
                 src={currentUser.profilePic}
@@ -199,12 +199,12 @@ export default function StoryViewer() {
             <div className="flex items-center gap-2">
               <button
                 onClick={togglePlayPause}
-                className="text-white hover:text-gray-300 transition-colors p-2">
+                className="text-white hover:text-gray-300 transition-colors p-2 bg-black/20 rounded-full">
                 {isPlaying ? <Pause size={20} /> : <Play size={20} />}
               </button>
               <button
                 onClick={handleClose}
-                className="text-white hover:text-gray-300 transition-colors p-2">
+                className="text-white hover:text-gray-300 transition-colors p-2 bg-black/20 rounded-full">
                 <X size={24} />
               </button>
             </div>
@@ -213,18 +213,18 @@ export default function StoryViewer() {
           {/* Navigation areas */}
           <button
             onClick={handlePrevStory}
-            className="absolute left-0 top-0 w-1/3 h-full z-10"
+            className="absolute left-0 top-20 w-1/3 h-[calc(100%-5rem)] z-10"
           />
 
           <button
             onClick={handleNextStory}
-            className="absolute right-0 top-0 w-1/3 h-full z-10"
+            className="absolute right-0 top-20 w-1/3 h-[calc(100%-5rem)] z-10"
           />
 
           {/* Center tap area to pause/play */}
           <button
             onClick={togglePlayPause}
-            className="absolute inset-0 w-1/3 left-1/3 z-10"
+            className="absolute top-20 left-1/3 w-1/3 h-[calc(100%-5rem)] z-10"
           />
         </div>
       </div>
